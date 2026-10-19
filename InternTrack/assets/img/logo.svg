@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="95" fill="#1e3a5f" stroke="#0d9488" stroke-width="6"/>
+  
+  <!-- Inner Circle -->
+  <circle cx="100" cy="100" r="75" fill="#0f172a"/>
+  
+  <!-- Stylized Track / Path -->
+  <path d="M40 120 Q70 60 100 90 T160 70" fill="none" stroke="#14b8a6" stroke-width="8" stroke-linecap="round"/>
+  <path d="M45 135 Q80 80 110 105 T165 90" fill="none" stroke="#2dd4bf" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+  
+  <!-- Person / Student Icon -->
+  <circle cx="100" cy="55" r="18" fill="#f8fafc"/>
+  <path d="M75 95 Q100 75 125 95 L125 115 Q100 105 75 115 Z" fill="#f8fafc"/>
+  
+  <!-- Checkmark Badge -->
+  <circle cx="145" cy="145" r="22" fill="#0d9488"/>
+  <path d="M135 145 L142 152 L157 137" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Text "IT" -->
+  <text x="100" y="175" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#14b8a6" text-anchor="middle">IT</text>
+</svg>

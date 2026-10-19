@@ -1,0 +1,91 @@
+:root {
+    --primary: #1e3a5f;
+    --primary-light: #2c5282;
+    --accent: #3182ce;
+    --success: #38a169;
+    --warning: #d69e2e;
+    --danger: #e53e3e;
+    --bg: #f7fafc;
+    --text: #2d3748;
+    --muted: #718096;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+.login-page {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #3182ce 100%);
+}
+.login-card {
+    background: #fff; border-radius: 16px; box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+    padding: 2.5rem; width: 100%; max-width: 420px;
+}
+.login-card .logo { text-align: center; margin-bottom: 1.5rem; }
+.login-card .logo h1 { color: var(--primary); font-size: 1.75rem; font-weight: 700; }
+.login-card .logo p { color: var(--muted); font-size: .9rem; }
+
+.sidebar {
+    width: 260px; background: var(--primary); color: #fff; min-height: 100vh;
+    position: fixed; left: 0; top: 0; z-index: 100;
+}
+.sidebar-brand { padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,.1); text-align: center; }
+.sidebar-brand h4 { font-weight: 700; margin: 0; letter-spacing: 1px; }
+.sidebar-brand small { opacity: .7; font-size: .75rem; }
+.sidebar-nav { padding: 1rem 0; }
+.sidebar-nav a {
+    display: flex; align-items: center; gap: .75rem; padding: .75rem 1.5rem;
+    color: rgba(255,255,255,.85); text-decoration: none; transition: all .2s; font-size: .95rem;
+}
+.sidebar-nav a:hover, .sidebar-nav a.active { background: rgba(255,255,255,.12); color: #fff; }
+.sidebar-nav a i { width: 20px; text-align: center; }
+
+.main-content { margin-left: 260px; padding: 1.5rem 2rem; min-height: 100vh; }
+.topbar {
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;
+    background: #fff; padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+.topbar h2 { font-size: 1.35rem; font-weight: 600; margin: 0; }
+
+.stat-card {
+    background: #fff; border-radius: 12px; padding: 1.25rem 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08); border-left: 4px solid var(--accent); transition: transform .2s;
+}
+.stat-card:hover { transform: translateY(-2px); }
+.stat-card .stat-value { font-size: 1.75rem; font-weight: 700; color: var(--primary); }
+.stat-card .stat-label { font-size: .85rem; color: var(--muted); margin-top: .25rem; }
+.stat-card.success { border-left-color: var(--success); }
+.stat-card.warning { border-left-color: var(--warning); }
+.stat-card.danger { border-left-color: var(--danger); }
+
+.card-custom { background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.08); overflow: hidden; }
+.card-custom .card-header { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 1rem 1.25rem; font-weight: 600; }
+.card-custom .card-body { padding: 1.25rem; }
+
+.table-custom { margin: 0; }
+.table-custom thead th {
+    background: #f8fafc; font-weight: 600; font-size: .85rem; text-transform: uppercase;
+    letter-spacing: .03em; color: var(--muted); border-bottom: 2px solid #e2e8f0;
+}
+.table-custom td { vertical-align: middle; font-size: .925rem; }
+
+.badge-status { padding: .35em .75em; border-radius: 999px; font-size: .75rem; font-weight: 600; }
+.badge-aktif { background: #c6f6d5; color: #22543d; }
+.badge-selesai { background: #bee3f8; color: #2a4365; }
+.badge-belum { background: #feebc8; color: #744210; }
+.badge-sangatbaik { background: #c6f6d5; color: #22543d; }
+.badge-baik { background: #bee3f8; color: #2a4365; }
+.badge-perhatian { background: #feebc8; color: #744210; }
+.badge-pembinaan { background: #fed7d7; color: #742a2a; }
+
+.form-label { font-weight: 500; font-size: .9rem; margin-bottom: .35rem; }
+.form-control:focus, .form-select:focus { border-color: var(--accent); box-shadow: 0 0 0 .2rem rgba(49,130,206,.25); }
+
+@media (max-width: 992px) {
+    .sidebar { transform: translateX(-100%); }
+    .sidebar.show { transform: translateX(0); }
+    .main-content { margin-left: 0; }
+}
+@media print {
+    .sidebar, .topbar, .no-print { display: none !important; }
+    .main-content { margin-left: 0; padding: 0; }
+}
